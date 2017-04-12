@@ -1,0 +1,18 @@
+//
+//  Production.xcconfig
+//  SwiftDemo
+//
+//  Created by Fay on 2017/4/12.
+//  Copyright © 2017年 Fay. All rights reserved.
+//
+
+
+//:configuration = Production
+GCC_PREPROCESSOR_DEFINITIONS = PRODUCTION=1
+
+//:completeSettings = none
+
+//:configuration = Debug Production
+OTHER_SWIFT_FLAGS = -DPRODUCTION
+
+//:completeSettings = none

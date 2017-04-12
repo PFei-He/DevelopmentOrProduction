@@ -1,0 +1,12 @@
+//
+//  Production.xcconfig
+//  ObjCDemo
+//
+//  Created by Fay on 2017/4/12.
+//  Copyright © 2017年 Fay. All rights reserved.
+//
+
+//:configuration = Debug Development
+GCC_PREPROCESSOR_DEFINITIONS = PRODUCTION=1
+
+//:completeSettings = none
