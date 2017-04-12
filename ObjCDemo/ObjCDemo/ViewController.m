@@ -17,14 +17,30 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    self.label.text = version;
+    self.label.text = [[self systemInfoForName:@"HOST_URL"] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+    
+    NSLog(@"current compiled version: %@", version);
+    
+#if DEVELOPMENT
+    NSLog(@"If the current compiled version is development, print this message.");
+    NSLog(@"So can do something only for debug, such as print run record.");
+#endif
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (NSString *)systemInfoForName:(NSString *)name
+{
+    NSDictionary *dictionary = [NSBundle mainBundle].infoDictionary;
+    return dictionary[name];
+}
+
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

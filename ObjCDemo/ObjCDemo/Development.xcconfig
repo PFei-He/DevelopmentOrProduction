@@ -10,3 +10,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT=1
 
 //:completeSettings = none
+
+HOST_URL = https:\/\/development.host.com

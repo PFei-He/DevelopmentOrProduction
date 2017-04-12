@@ -15,7 +15,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = version
+        label.text = systemInfo(for: "HOST_URL").replacingOccurrences(of: "\\", with: "")
+        
+        print("current compiled version: "+version)
+        
+        #if DEVELOPMENT
+            print("If the current compiled version is development, print this message.")
+            print("So can do something only for debug, such as print run record.")
+        #endif
+    }
+    
+    func systemInfo(for name: String) -> String {
+        if let dictionary = Bundle.main.infoDictionary {
+            return dictionary[name] as! String
+        } else {
+            return ""
+        }
     }
 
     override func didReceiveMemoryWarning() {

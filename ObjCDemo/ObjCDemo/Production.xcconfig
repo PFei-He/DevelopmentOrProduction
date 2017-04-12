@@ -10,3 +10,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = PRODUCTION=1
 
 //:completeSettings = none
+
+HOST_URL = https:\/\/production.host.com
